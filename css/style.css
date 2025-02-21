@@ -1,0 +1,271 @@
+:root {
+  --main-color: #3a513e;
+  --second-color: #57875f ;
+  --hover-color: #3a513e2b;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  	list-style: none !important;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: "Nunito", serif;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+	@keyframes arrow {
+	from {
+		bottom: 30px;
+	}
+	to {
+		bottom: 40px;
+	}
+	}
+	.move {
+	background-color: var(--main-color);
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	width: 30px;
+	height: 30px;
+	animation: arrow 0.8s ease-in-out infinite;
+	z-index: 1000 !important;
+	cursor: grab;
+	}
+	.move i {
+	transition: 0.6s ease-in-out;
+	font-size: 12px;
+	color: white !important;
+	}
+	/* social icon */
+	.fa-google:hover {
+	color: red !important;
+	transition: 0.3s ease-in-out;
+	}
+	.fa-facebook-f:hover {
+	color: rgb(0, 174, 255) !important;
+	transition: 0.3s ease-in-out;
+	}
+	.fa-github:hover {
+	color: black !important;
+	transition: 0.3s ease-in-out;
+	}
+	.fa-linkedin-in:hover {
+	color: rgb(0, 34, 255) !important;
+	transition: 0.3s ease-in-out;
+	}
+	.fa-linkedin:hover {
+	color: rgb(0, 34, 255) !important;
+	transition: 0.3s ease-in-out;
+	}
+	.fa-google-play:hover {
+	color: rgb(255, 77, 0) !important;
+	transition: 0.3s ease-in-out;
+	}
+	.fa-paypal:hover {
+	color: rgb(0, 21, 255) !important;
+	transition: 0.3s ease-in-out;
+	}
+	.fa-twitter:hover {
+	color: rgb(0, 140, 255) !important;
+	transition: 0.3s ease-in-out;
+	}
+	.fa-youtube:hover {
+	color: red !important;
+	transition: 0.3s ease-in-out;
+	}
+	.fa-instagram:hover {
+	color: rgb(170, 0, 255) !important;
+	transition: 0.3s ease-in-out;
+	}
+	/* social icon */
+/*title  */
+.title-info {
+  font-size: 12px;
+}
+/*title  */
+.box-Name{
+    background-color:#f4f5f9;
+    cursor: pointer;
+}
+.box-Name::after{
+    content: "+";
+    position: absolute;
+    top: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    right:20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.active .box-Name::after{
+    content: "-";
+    transition: 0.6s;
+}
+.info{
+    width: 93%;
+    background-color:#f4f5f9;
+    transition: 0.6s;
+    height: 0;
+    padding: 0 10px ;
+    font-size: 14px;
+}
+.active .info{
+    height:75px;
+}
+/*  */
+
+
+
+.star i {
+  font-size: 8px;
+  color: gold;
+}
+.main {
+  background-image: url(../image/home-3.jpg);
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+.main::after {
+  top: 0;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    rgba(236, 186, 85, 0.454),
+    rgba(0, 0, 0, 0.502),
+    rgba(0, 0, 0, 0.7),
+    rgb(0, 0, 0)
+  );
+  z-index: -1;
+}
+#content .card {
+  border: none;
+  background-color: rgba(4, 4, 4, 0.432);
+}
+#content .card .num {
+  color: #986e28;
+}
+/* step */
+.step {
+  min-height: 50vh;
+}
+.step .card .card-body i {
+  color: var(--main-color);
+}
+.step .card:hover {
+  cursor: grab;
+  transition: 0.3s ease;
+  background-color: var(--hover-color);
+}
+
+.image-content {
+  display: grid !important;
+  grid-auto-flow: column;
+  grid-auto-columns: 25%;
+  justify-items: stretch;
+  overflow-x: scroll;
+}
+.image-content img {
+  height: 200px;
+}
+@media screen and (max-width: 990px) {
+  .image-content {
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    justify-items: stretch;
+    overflow-x: scroll;
+  }
+  .active .info{
+    height:135px;
+}
+}
+
+.post {
+  background-image: url(../image/101.webp);
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+.post::after {
+  top: 0;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    rgba(0, 0, 0, 0.235),
+    rgb(0, 0, 0)
+  ); 
+  z-index: -1;
+}
+
+	/* contact */
+	.contact .card:hover {
+	background-color: rgb(243, 243, 243) !important;
+	transition: 0.3s ease-in-out;
+	cursor: grab;
+	}
+	/* contact */
+  
+.blog .card img{
+height: 300px !important;
+} 
+
+.blog .card {
+  background-color: transparent;
+}
+.blog .card h3 {
+  transition: 0.3s;
+  cursor: pointer;
+}
+.blog .card .span {
+  font-size: 14px;
+}
+.blog .card .span i {
+  font-size: 12px;
+  color: var(--main-color);
+}
+.blog .card .read {
+  transition: 0.3s;
+}
+.blog .card .read:hover,
+.blog .card h3:hover {
+  cursor: pointer;
+  color: var(--hover-color);
+}
+
+	/* footer */
+	footer li {
+	list-style: none;
+	}
+	footer li a:hover,
+	footer li:hover .fa-arrow-right {
+	color: var(--second-color) !important;
+	transition: 0.3s;
+	}
+	footer input {
+	outline: none;
+	}
+	footer form i {
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	}
+	/*end footer */
